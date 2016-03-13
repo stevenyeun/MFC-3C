@@ -88,12 +88,12 @@ namespace MFC_3C
 
         private void click_Lens1(object sender, RoutedEventArgs e)
         {
-            SendData("VF=1");
+            SendData("VF=2"); 
         }
 
         private void click_Lens2(object sender, RoutedEventArgs e)
         {
-            SendData("VF=2");
+            SendData("VF=1");
         }
 
         private void click_Lens3(object sender, RoutedEventArgs e)

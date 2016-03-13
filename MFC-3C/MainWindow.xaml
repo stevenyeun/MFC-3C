@@ -27,11 +27,11 @@
         </Grid>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
-            <Button Content="원점 복귀" Click="click_home" Margin="2"/>
-            <Button Content="1번 렌즈(650)" Click="click_Lens1" Margin="2"/>
-            <Button Content="2번 렌즈(750)" Click="click_Lens2" Margin="2"/>
-            <Button Content="3번 렌즈(850)" Click="click_Lens3" Margin="2"/>
-            <Button Content="다음 렌즈 변경" Click="click_NextLens" Margin="2"/>
+            <Button Content="R" Click="click_home" Margin="2"/>
+            <Button Content="1" Click="click_Lens1" Margin="2"/>
+            <Button Content="2" Click="click_Lens2" Margin="2"/>
+            <Button Content="3" Click="click_Lens3" Margin="2"/>
+            <Button Content="S" Click="click_NextLens" Margin="2"/>
         </StackPanel>
     </Grid>
 </Window>
