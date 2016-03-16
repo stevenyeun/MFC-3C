@@ -26,6 +26,8 @@
             <ComboBox Grid.Column="1" x:Name="comboBox_baudList" ItemsSource="{Binding}" Margin="2"/>
             <Button Content="포트 열기" Grid.Column="2" Margin="2" Click="click_connection"/> 
         </Grid>
+        
+        
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
             </Grid.RowDefinitions>
@@ -43,7 +45,6 @@
             <Button Grid.Column="3" Content="3" Click="click_Lens3" Margin="2"/>
             <Button Grid.Column="4" Content="S" Click="click_NextLens" Margin="2"/>
         </Grid>
-
 
     </Grid>
 </Window>
