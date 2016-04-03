@@ -24,7 +24,7 @@
 
             <ComboBox Grid.Column="0" x:Name="comboBox_comPortList" ItemsSource="{Binding}" Margin="2"/>
             <ComboBox Grid.Column="1" x:Name="comboBox_baudList" ItemsSource="{Binding}" Margin="2"/>
-            <Button Content="포트 열기" Grid.Column="2" Margin="2" Click="click_connection"/> 
+            <Button x:Name="btn_openPort" Content="포트 열기" Grid.Column="2" Margin="2" Click="click_connection"/> 
         </Grid>
         
         

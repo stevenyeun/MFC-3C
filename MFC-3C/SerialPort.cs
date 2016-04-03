@@ -11,6 +11,11 @@ namespace MFC_3C
     {
         private SerialPort serialPort;
 
+        public void ClosePort()
+        {
+            serialPort.Close();
+
+        }
         public bool OpenComport(int nPortNum, int nBaudRate, StringBuilder errMsg)
         {
             try

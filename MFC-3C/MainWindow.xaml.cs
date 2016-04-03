@@ -46,15 +46,25 @@ namespace MFC_3C
 
         private void click_connection(object sender, RoutedEventArgs e)
         {
-            int nNum = comboBox_comPortList.SelectedIndex + 1;
-            int nBaud = baudList[comboBox_baudList.SelectedIndex];
-            StringBuilder errMsg = new StringBuilder();
-            if (serialComm.OpenComport(nNum, nBaud, errMsg))
+            if ( btn_openPort.Content.ToString() == "포트 열기" )
             {
-
+                int nNum = comboBox_comPortList.SelectedIndex + 1;
+                int nBaud = baudList[comboBox_baudList.SelectedIndex];
+                StringBuilder errMsg = new StringBuilder();
+                if (serialComm.OpenComport(nNum, nBaud, errMsg))
+                {
+                    btn_openPort.Content = "포트 닫기";
+                }
+                else
+                    MessageBox.Show(errMsg.ToString());
             }
             else
-                MessageBox.Show(errMsg.ToString());
+            {
+                serialComm.ClosePort();
+                btn_openPort.Content = "포트 열기";
+            }
+
+            
 
 
         }
@@ -82,27 +92,27 @@ namespace MFC_3C
         }
         private void click_home(object sender, RoutedEventArgs e)
         {
-            SendData("VF=0");
+            SendData("VF=0\r");
         }
 
         private void click_Lens1(object sender, RoutedEventArgs e)
         {
-            SendData("VF=2"); 
+            SendData("VF=2\r"); 
         }
 
         private void click_Lens2(object sender, RoutedEventArgs e)
         {
-            SendData("VF=1");
+            SendData("VF=1\r");
         }
 
         private void click_Lens3(object sender, RoutedEventArgs e)
         {
-            SendData("VF=3");
+            SendData("VF=3\r");
         }
 
         private void click_NextLens(object sender, RoutedEventArgs e)
         {
-            SendData("r");
+            SendData("r\r");
         }
     }
 }
